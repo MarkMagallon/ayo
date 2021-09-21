@@ -6,7 +6,7 @@ main.geometry("520x600")
 
 #create menu
 
-def create_card():
+def create_card(): #need a code to create flashcard for the frontside of the flashcard, can add the other side if this code work
     hide_all_frame()
     create_button()
     frontside_input()
@@ -19,7 +19,7 @@ def quiz_card():
     card_frame.pack(fill="both", expand=1)
 
 
-def create_button():
+def create_button(): #command under the text"create" needs to be inline with the create the flashcard code
     button = Button(card_frame, text="Create", command=create_button, padx=20, pady=10). grid(row=3, column=2)
     button = Button(card_frame, text="Next", command=next_button, padx=20, pady=10). grid(row=3, column=3)
     button = Button(card_frame, text="Previous", command=prev_button, padx=20, pady=10). grid(row=3, column=1)
@@ -29,7 +29,7 @@ def frontside_input():
     frontside = Text(main, width= 200)
     frontside.pack()
 
-def quiz_answer():
+def quiz_answer(): 
     label = Label(main, text="This is where the text should be").pack()
     button = Button(card_frame, text="Submit", padx=20, pady=10).grid(row=5, column=2)
     button = Button(card_frame, text="Previous", command=prev_button, padx=20, pady=10).grid(row=5, column=1)
